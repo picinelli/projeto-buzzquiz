@@ -5,6 +5,5 @@ const promise = axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizz
 promise.then(quizzesRecebidos);
 
 function quizzesRecebidos (resposta) {
-    console.log(resposta.data);
     quizzes = resposta.data
 }
