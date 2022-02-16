@@ -19,7 +19,7 @@
     </header>
 
     <main>
-        <section class="listaDeQuizzes">
+        <section class="listaDeQuizzes escondido">
             <div class="novoQuizz">
                 <p>Você não criou nenhum quizz ainda :(</p>
                 <button class="criarQuizz">Criar Quizz</button>
@@ -48,7 +48,7 @@
             </div>
         </section>
 
-        <section class="pagina-quizz escondido">
+        <section class="pagina-quizz">
             <div class="titulo-quizz">
                 <img src="imgs/Hogwarts.svg" alt="">
                 <p>O quão Potterhead é você?</p>
@@ -58,19 +58,19 @@
                     <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
                 </div>
                 <div class="opcoes-quizz">
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
@@ -82,19 +82,19 @@
                     <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
                 </div>
                 <div class="opcoes-quizz">
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
@@ -131,6 +131,7 @@
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/scriptPage2.js"></script>
 </body>
 </html>
