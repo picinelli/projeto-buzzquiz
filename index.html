@@ -17,7 +17,7 @@
     </header>
 
     <main>
-        <section class="listaDeQuizzes">
+        <section class="listaDeQuizzes" style="display: none">
             <div class="novoQuizz">
                 <p>Você não criou nenhum quizz ainda :(</p>
                 <button class="criarQuizz">Criar Quizz</button>
@@ -48,7 +48,15 @@
 
         <section></section>
 
-        <section></section>
+        <section class="criacaoQuizz">
+            <div>
+                <p>Comece pelo começo</p>
+                <input type="text" placeholder="Título do seu quizz">
+                <input type="text" placeholder="URL da imagem do seu quizz">
+                <input type="text" placeholder="Quantidade de perguntas do quizz">
+                <input type="text" placeholder="Quantidade de níveis do quizz">
+            </div>
+        </section>
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

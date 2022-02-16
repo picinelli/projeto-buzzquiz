@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: #E5E5E5;
 }
 
 header {
@@ -12,6 +13,7 @@ header {
     height: 69px;
     background: #EC362D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
 }
 
 h1 {
@@ -111,4 +113,33 @@ h2 {
     color: white;
 }
 
+.criacaoQuizz div {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 106px;
+    width: 100%;
+}
+
+.criacaoQuizz p {
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.criacaoQuizz input {
+    width: 341px;
+    height: 46px;
+    margin: 9px;
+}
+
+.esconderPagina {
+    display: none;
+}
 
