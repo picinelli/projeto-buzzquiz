@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylePage1.css">
+    <link rel="stylesheet" href="stylePage3.css">
+    <link rel="stylesheet" href="stylePage2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
     </header>
 
     <main>
-        <section class="listaDeQuizzes escondido">
+        <section class="listaDeQuizzes">
             <div class="novoQuizz">
                 <p>Você não criou nenhum quizz ainda :(</p>
                 <button class="criarQuizz">Criar Quizz</button>
@@ -46,7 +48,7 @@
             </div>
         </section>
 
-        <section class="pagina-quizz">
+        <section class="pagina-quizz escondido">
             <div class="titulo-quizz">
                 <img src="imgs/Hogwarts.svg" alt="">
                 <p>O quão Potterhead é você?</p>
@@ -96,12 +98,22 @@
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    
+                </div>
+            </div>
+            <div class="caixa-quizz ">
+                <div class="pergunta-quizz quizz__resultado">
+                    <p>88% de acerto: Você é praticamente um aluno de Hogwarts!</p>
+                </div>
+                <div class="opcoes-quizz">
+                    <div class="quizz-resultado">
+                        <img class="quizz__resultado-img" src="imgs/Dumbledore.svg" alt="">
+                        <p class="quizz__resultado-texto teste">Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="criacaoQuizz">
+        <section class="criacaoQuizz escondido">
             <div>
                 <p>Comece pelo começo</p>
                 <input type="text" placeholder="Título do seu quizz">
