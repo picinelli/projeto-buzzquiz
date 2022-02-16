@@ -31,12 +31,39 @@ h1 {
     color: #FFFFFF;
 }
 
+h2 {
+    width: 158px;
+    height: 23px;
+    left: 18px;
+    top: 316px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.listaDeQuizzes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.listaDeQuizzes h2 {
+    margin-top: 35px;
+    margin-bottom: 12px;
+}
+
 .novoQuizz {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    position: absolute;
     width: 340px;
     height: 181px;
     top: 100px;
@@ -69,14 +96,10 @@ h1 {
     color: #EC362D;
 }
 
-.escondido {
-    display: none;
-}
-
 .pagina-quizz {
     margin-top: 69px;
     width: 100%;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
 }
@@ -164,4 +187,29 @@ h1 {
 .opcao {
     display: flex;
     justify-content: left;
+}
+.quizzExemplo {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.quizzExemplo img {
+    position: absolute;
+}
+
+.quizzExemplo p {
+    position: relative;
+    width: 340px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    margin-left: 18px;
+    margin-top: 120px;
+    color: white;
+}
+
+.escondido {
+    display: none;
 }
