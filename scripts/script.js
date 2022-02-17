@@ -13,5 +13,5 @@ function criarNovoQuizz() {
     for (let i = 0; i < todasAsSections.length; i++) {
         todasAsSections[i].classList.add("escondido");
     }
-    paginaCriacaoQuizz.classList.remove("escondido")
+    paginaCriacaoQuizz.classList.remove("escondido");
 }
