@@ -19,10 +19,10 @@
     </header>
 
     <main>
-        <section class="listaDeQuizzes escondido">
+        <section class="listaDeQuizzes">
             <div class="novoQuizz">
                 <p>Você não criou nenhum quizz ainda :(</p>
-                <button class="criarQuizz">Criar Quizz</button>
+                <button onclick="criarNovoQuizz()" class="criarQuizz">Criar Quizz</button>
             </div>
 
             <h2>Todos os Quizzes</h2>
@@ -48,7 +48,7 @@
             </div>
         </section>
 
-        <section class="pagina-quizz">
+        <section class="pagina-quizz escondido">
             <div class="titulo-quizz">
                 <img src="imgs/Hogwarts.svg" alt="">
                 <p>O quão Potterhead é você?</p>
@@ -120,18 +120,20 @@
         </section>
 
         <section class="criacaoQuizz escondido">
+            <p>Comece pelo começo</p>
             <div>
-                <p>Comece pelo começo</p>
-                <input type="text" placeholder="Título do seu quizz">
-                <input type="text" placeholder="URL da imagem do seu quizz">
-                <input type="text" placeholder="Quantidade de perguntas do quizz">
-                <input type="text" placeholder="Quantidade de níveis do quizz">
+                <input class="tituloNovoQuizz" type="text" placeholder="Título do seu quizz">
+                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem do seu quizz">
+                <input class="quantidadePerguntas" type="text" placeholder="Quantidade de perguntas do quizz">
+                <input class="quantidadeNiveis" type="text" placeholder="Quantidade de níveis do quizz">
             </div>
+            <button>Prosseguir pra criar perguntas</button>
         </section>
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/scriptPage2.js"></script>
+    <script src="scripts/scriptsPage3.js"></script>
 </body>
 </html>
