@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylePage1.css">
+    <link rel="stylesheet" href="stylePage3.css">
+    <link rel="stylesheet" href="stylePage2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -17,10 +19,10 @@
     </header>
 
     <main>
-        <section class="listaDeQuizzes escondido">
+        <section class="listaDeQuizzes">
             <div class="novoQuizz">
                 <p>Você não criou nenhum quizz ainda :(</p>
-                <button class="criarQuizz">Criar Quizz</button>
+                <button onclick="criarNovoQuizz()" class="criarQuizz">Criar Quizz</button>
             </div>
 
             <h2>Todos os Quizzes</h2>
@@ -46,7 +48,7 @@
             </div>
         </section>
 
-        <section class="pagina-quizz" style="display: none;">
+        <section class="pagina-quizz escondido">
             <div class="titulo-quizz">
                 <img src="imgs/Hogwarts.svg" alt="">
                 <p>O quão Potterhead é você?</p>
@@ -56,19 +58,19 @@
                     <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
                 </div>
                 <div class="opcoes-quizz">
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
@@ -80,40 +82,57 @@
                     <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
                 </div>
                 <div class="opcoes-quizz">
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    <div class="opcao">
+                    <div class="opcao" onclick="selecionarResposta(this)">
                         <img src="imgs/gato.svg" alt="">
                         <p>Gatíneo</p>
                     </div>
-                    
+                </div>
+            </div>
+            <div class="resultado-quizz">
+                <div class="quizz__resultado-titulo">
+                    <p>88% de acerto: Você é praticamente um aluno de Hogwarts!</p>
+                </div>
+                <div class="quizz__resultado-conteudo">
+                    <img class="quizz__resultado-img" src="imgs/Dumbledore.svg" alt="">
+                    <p class="quizz__resultado-texto">Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
+                </div>
+            </div>
+            <div class="botoes__quizz">
+                <div class="botoes__quizz-reiniciar">
+                    <p>Reiniciar Quizz</p>
+                </div>
+                <div class="botoes__quizz-voltarhome">
+                    <p>Voltar pra home</p>
                 </div>
             </div>
         </section>
 
-        <section class="criacaoQuizz">
+        <section class="criacaoQuizz escondido">
             <p>Comece pelo começo</p>
-            <div class="inputs">
+            <div>
                 <input type="text" placeholder="Título do seu quizz">
                 <input type="text" placeholder="URL da imagem do seu quizz">
                 <input type="text" placeholder="Quantidade de perguntas do quizz">
                 <input type="text" placeholder="Quantidade de níveis do quizz">
             </div>
-            <button class="criarPerguntas">Prosseguir para criar perguntas</button>
+            <button>Prosseguir pra criar perguntas</button>
         </section>
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/scriptPage2.js"></script>
 </body>
 </html>
