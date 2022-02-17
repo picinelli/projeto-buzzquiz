@@ -1,19 +1,17 @@
 let quizzes = [];
 
-<<<<<<< HEAD
 // function esconderElemento (elemento) {
 //     const sectionPai = elemento.parentNode;
 //     sectionPai.classList.add("escondido");
 // }
 
+// função que esconde todos os itens e abre a página de criação de quizz
 function criarNovoQuizz() {
-    
-=======
-//  requisição
-const promise = axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes")
-promise.then(quizzesRecebidos);
-
-function quizzesRecebidos (resposta) {
-    quizzes = resposta.data
->>>>>>> af8085f9b59a650a236e0e928128bcccc5b62efb
+    const todasAsSections = document.querySelectorAll("section");
+    const paginaCriacaoQuizz = document.querySelector(".criacaoQuizz");
+    console.log(todasAsSections[0]);
+    for (let i = 0; i < todasAsSections.length; i++) {
+        todasAsSections[i].classList.add("escondido");
+    }
+    paginaCriacaoQuizz.classList.remove("escondido")
 }
