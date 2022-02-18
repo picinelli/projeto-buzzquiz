@@ -13,6 +13,7 @@ let novoQuizz = {
 function botaoCriarPerguntas() {
     novoQuizz.title = pegarTitulo.value;
     novoQuizz.image = pegarURL.value;
+    abrirPagina("criacaoQuizzSecundaria");
     const perguntas = document.querySelector(".criacaoQuizzSecundaria");
     let contador = 2;
     for (let i = 1; i < pegarQtdPerguntas.value; i++) {
@@ -25,12 +26,22 @@ function botaoCriarPerguntas() {
         contador++
     }
     perguntas.innerHTML += `<button onclick="botaoCriarNiveis()">Prosseguir pra criar níveis</button>`
-    // mudarPagina()
-    abrirPagina("criacaoQuizzSecundaria");
 }
 
 function botaoCriarNiveis() {
     abrirPagina("criacaoQuizzTerciaria");
+    const niveis = document.querySelector(".criacaoQuizzTerciaria")
+    let contador = 2;
+    for (let i = 1; i < pegarQtdNiveis.value; i++) {
+        niveis.innerHTML += `
+        <div class="novaPergunta">
+            <p>Nível ${contador}</p>
+            <ion-icon name="create-outline"></ion-icon>
+        </div>
+        `
+        contador++
+    }
+    niveis.innerHTML += `<button onclick="botaoCriarNiveis()">Finalizar Quizz</button>`
 }
 
 function abrirPagina(classePagina) {
