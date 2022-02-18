@@ -25,16 +25,21 @@ function botaoCriarPerguntas() {
         contador++
     }
     perguntas.innerHTML += `<button onclick="botaoCriarNiveis()">Prosseguir pra criar níveis</button>`
-    mudarPagina()
+    // mudarPagina()
+    abrirPagina("criacaoQuizzSecundaria");
 }
 
-function mudarPagina() {
+function botaoCriarNiveis() {
+    abrirPagina("criacaoQuizzTerciaria");
+}
+
+function abrirPagina(classePagina) {
     const todasAsSections = document.querySelectorAll("section");
-    const paginaCriacaoQuizzSecundaria = document.querySelector(".criacaoQuizzSecundaria");
+    const paginaDesejada = document.querySelector(`.${classePagina}`);
     for (let i = 0; i < todasAsSections.length; i++) {
         todasAsSections[i].classList.add("escondido");
     }
-    paginaCriacaoQuizzSecundaria.classList.remove("escondido");
+    paginaDesejada.classList.remove("escondido");
 }
 
 // function segundaPaginaCriacao() {
