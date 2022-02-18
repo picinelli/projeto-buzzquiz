@@ -40,7 +40,6 @@
     font-style: italic;
     font-weight: normal;
     font-size: 19px;
-    line-height: 22px;
 }
 
 .criacaoQuizz button {
@@ -56,4 +55,134 @@
     line-height: 21px;
     color: #FFF5F4;
     border: 0px;
+}
+
+.criacaoQuizzSecundaria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.criacaoQuizzSecundaria input{
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    height: 46px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+
+.criacaoQuizzSecundaria p {
+    padding-top: 37px;
+    padding-bottom: 29px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: center;
+}
+
+.criacaoQuizzSecundaria ::placeholder {
+    padding-left: 14px;
+    color: #BABABA;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 19px;
+}
+
+.criacaoQuizzSecundaria button {
+    width: 324px;
+    height: 54px;
+    background: #EC362D;
+    border-radius: 15px;
+    margin-top: 29px;
+    margin-bottom: 61px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFF5F4;
+    border: 0px;
+}
+
+.novaPergunta {
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.novaPergunta ion-icon {
+    font-size: 26px;
+}
+
+.criacaoQuizzTerciaria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.criacaoQuizzTerciaria input{
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    height: 46px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+
+.criacaoQuizzTerciaria p {
+    padding-top: 37px;
+    padding-bottom: 29px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: center;
+}
+
+.criacaoQuizzTerciaria ::placeholder {
+    padding-left: 14px;
+    color: #BABABA;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 19px;
+}
+
+.criacaoQuizzTerciaria button {
+    width: 324px;
+    height: 54px;
+    background: #EC362D;
+    border-radius: 15px;
+    margin-top: 29px;
+    margin-bottom: 61px;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFF5F4;
+    border: 0px;
+}
+
+.novaPergunta {
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.novaPergunta ion-icon {
+    font-size: 26px;
 }

@@ -125,17 +125,55 @@
             </div>
         </section>
 
-        <section class="criacaoQuizz escondido">
-            <div>
-                <p>Comece pelo começo</p>
-                <input type="text" placeholder="Título do seu quizz">
-                <input type="text" placeholder="URL da imagem do seu quizz">
-                <input type="text" placeholder="Quantidade de perguntas do quizz">
-                <input type="text" placeholder="Quantidade de níveis do quizz">
+        <section class="criacaoQuizz">
+            <p>Comece pelo começo</p>
+            <div class="inputsDoUsuario">
+                <input class="tituloNovoQuizz" type="text" placeholder="Título do seu quizz">
+                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem do seu quizz">
+                <input class="quantidadePerguntas" type="text" placeholder="Quantidade de perguntas do quizz">
+                <input class="quantidadeNiveis" type="text" placeholder="Quantidade de níveis do quizz">
+            </div>
+            <button onclick="botaoCriarPerguntas()">Prosseguir pra criar perguntas</button>
+        </section>
+
+        <section class="criacaoQuizzSecundaria escondido">
+            <p>Crie suas perguntas</p>
+            <p>Pergunta 1</p>
+            <div class="inputsDoUsuario">
+                <input class="tituloNovoQuizz" type="text" placeholder="Texto da pergunta">
+                <input class="URLNovoQuizz" type="text" placeholder="Cor de fundo da pergunta">
+            </div>
+            <p>Resposta correta</p>
+            <div class="inputsDoUsuario">
+                <input class="tituloNovoQuizz" type="text" placeholder="Resposta correta">
+                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem">
+            </div>
+            <p>Respostas incorretas</p>
+            <div class="inputsDoUsuario">
+                <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 1">
+                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 1">
+                <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 2">
+                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 2">
+                <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 3">
+                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 3">
             </div>
         </section>
+
+        <section class="criacaoQuizzTerciaria escondido">
+                <p>Agora, decida os níveis</p>
+                <p>Nível 1</p>
+                <div class="inputsDoUsuario">
+                    <input class="tituloNovoQuizz" type="text" placeholder="Título do nível">
+                    <input class="URLNovoQuizz" type="text" placeholder="% de acerto mínima">
+                    <input class="tituloNovoQuizz" type="text" placeholder="URL da imagem do nível">
+                    <textarea placeholder="Descrição do nível"></textarea>
+                </div>
+        </section>
+
     </main>
     
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/scriptPage2.js"></script>
