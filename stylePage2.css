@@ -62,9 +62,15 @@
 .opcao > p {
     font-weight: bold;
     font-size: 13px;
-    color: #000000;
+
     margin-top: 5px;
     margin-bottom: 18px;
+    width: 163px;
+}
+
+.opcao > img {
+    width: 163px;
+    height: 113px;
 }
 
 .pergunta-quizz {
@@ -87,6 +93,14 @@
 
 .opcoes-quizz {
     display: flex;
+}
+
+.resposta-certa {
+    color: #009C22;
+}
+
+.resposta-errada {
+    color: #FF4B4B;
 }
 
 .resultado-quizz {
@@ -158,10 +172,9 @@
     color: #818181;
 }
 
-
-
-
-
+.opacidade {
+    opacity: 30%;
+}
 
 .escondido {
     display: none;
@@ -263,9 +276,5 @@
         margin-left: 0px;
         width: 300px;
         margin-top: 5px;
-    }
-
-    .opacidade {
-        opacity: 60%;
     }
 }
