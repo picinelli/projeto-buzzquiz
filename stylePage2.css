@@ -39,6 +39,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .pergunta-quizz {
@@ -62,10 +63,10 @@
 .opcao > p {
     font-weight: bold;
     font-size: 13px;
-
     margin-top: 5px;
     margin-bottom: 18px;
     width: 163px;
+    overflow-wrap: break-word;
 }
 
 .opcao > img {
@@ -120,6 +121,7 @@
     background-color: #EC362D;
     color:#FFFFFF;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     line-height: 22px;
@@ -128,15 +130,23 @@
 .quizz__resultado-img {
     margin: 18px;
     margin-top: -10px;
+    width: 340px;
+    height: 255px;
 }
 
 .quizz__resultado-texto {
+    width: 340px;
     font-size: 17px;
     font-weight: bold;
     line-height: 20px;
     color: #484848;
     margin: 18px;
     margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-break: break-all;
 }
 
 .botoes__quizz {
@@ -174,6 +184,16 @@
 
 .opacidade {
     opacity: 30%;
+}
+
+.escurecimento-imagem {
+    background-color: black;
+    opacity: 60%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .escondido {
@@ -231,10 +251,10 @@
     }
 
     .opcao > p {
+        width: 330px;
         font-weight: bold;
         font-size: 20px;
         line-height: 23px;
-        color: #000000;
         margin-left: 15px;
         margin-top: -10px;
         margin-bottom: 30px;
@@ -270,11 +290,12 @@
     .quizz__resultado-conteudo > img {
         margin-left: -19px;
         margin-top: 5px;
+        width: 364px;
+        height: 273px;
     }
 
     .quizz__resultado-conteudo > p {
         margin-left: 0px;
-        width: 300px;
         margin-top: 5px;
     }
 }
