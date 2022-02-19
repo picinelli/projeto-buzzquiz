@@ -1,5 +1,4 @@
 // Variaveis globais
-let IDQuiz = 2590
 let resultado
 let resultadoTitulo
 let resultadoImagem
@@ -9,9 +8,6 @@ let contadorChecarResultado = 0
 let arrayTitulosResultado
 let somaResultado = 0
 
-// requisicao para criar o conteudo
-let promessaConteudo = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${IDQuiz}`);
-promessaConteudo.then(criarPerguntasQuizz).catch(() => window.alert('Algo de errado nao esta certo, tente novamente!'))
 
 function criarPerguntasQuizz(promessa) {
     let quantidadeDePerguntas = promessa.data.questions.length;
@@ -35,7 +31,7 @@ function criarTituloPerguntas(promessa) {
         let paginaQuizz = document.querySelector('.pagina-quizz')
         paginaQuizz.innerHTML += `
         <div class="caixa-quizz">
-            <div class="pergunta-quizz">
+            <div class="pergunta-quizz" style="background-color: ${elemento.color}">
                 <p>${elemento.title}</p>
             </div>
             <div class="opcoes-quizz">
@@ -47,9 +43,9 @@ function criarTituloPerguntas(promessa) {
 
 function criarRespostas(promessa) {
     let selecaoDePergunta = [...document.querySelectorAll('.opcoes-quizz')]
-    let perguntas = promessa.data.questions
 
     for (let i = 0; i < selecaoDePergunta.length; i++) {
+        let corTitulo = promessa.data.questions[i].color[i]
         let dadosRespostas = promessa.data.questions[i].answers
         // Para deixar a distribuição de respostas aleatória
         dadosRespostas.sort(() => { 
@@ -133,6 +129,24 @@ function criarTituloResultado() {
 }
 
 function reiniciarQuizz() {
+    reiniciarConteudo()
+    
+    let resetarQuizz = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${IDQuiz}`);
+    resetarQuizz.then(criarPerguntasQuizz)
+}
+
+function irParaPaginaInicial() {
+    reiniciarConteudo()
+
+    let paginaDois = document.querySelector('.pagina-quizz')
+    let paginaUm = document.querySelector('.listaDeQuizzes')
+
+    paginaDois.classList.add('escondido')
+    paginaUm.classList.remove('escondido')
+    window.scrollTo(0, 0);
+}
+
+function reiniciarConteudo() {
     let paginaQuizz = document.querySelector('.pagina-quizz')
     let tituloQuizz = document.querySelector('.titulo-quizz')
 
@@ -152,14 +166,4 @@ function reiniciarQuizz() {
         <p>O quão Potterhead é você?</p>
     </div>
     `
-    promessaConteudo.then(criarPerguntasQuizz)
-}
-
-function irParaPaginaInicial() {
-    let paginaDois = document.querySelector('.pagina-quizz')
-    let paginaUm = document.querySelector('.listaDeQuizzes')
-
-    paginaDois.classList.add('escondido')
-    paginaUm.classList.remove('escondido')
-    window.scrollTo(0, 0);
 }

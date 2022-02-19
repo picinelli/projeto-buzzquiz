@@ -4,6 +4,7 @@ body {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
+    background: #FAFAFA;
 }
 
 main {
@@ -55,6 +56,11 @@ h2 {
     margin-top: 100px;
 }
 
+.listaDeQuizzesConteudo {
+    display: flex;
+    flex-direction: column;
+}
+
 .listaDeQuizzes h2 {
     margin-top: 35px;
     margin-bottom: 12px;
@@ -98,12 +104,18 @@ h2 {
 }
 
 .quizzExemplo {
-    width: 100%;
-    margin-bottom: 32px;
+    width: 340px;
+    height: 181px;
+    margin-bottom: 16px;
+    margin-right: 9px;
+    display: flex;
 }
 
 .quizzExemplo img {
     position: absolute;
+    width: 340px;
+    height: 181px;
+    border-radius: 5px;
 }
 
 .quizzExemplo p {
@@ -115,6 +127,36 @@ h2 {
     line-height: 22px;
     text-align: left;
     margin-left: 18px;
-    margin-top: 120px;
+    margin-top: 140px;
     color: white;
+}
+
+@media (min-width: 1100px) {
+    .novoQuizz {
+        width: 1037px;
+    }
+
+    .quizzExemplo {
+        margin-bottom: 12px;
+        margin-top: 5px;
+    }
+
+    .listaDeQuizzesConteudo {
+        width: 1081px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .quizzExemplo p {
+        position: relative;
+        width: 340px;
+        font-family: Roboto;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        margin-left: 18px;
+        margin-top: 140px;
+        color: white;
+    }
 }
