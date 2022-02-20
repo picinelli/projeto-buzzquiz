@@ -18,7 +18,7 @@ function botaoCriarPerguntas() {
     let contador = 2;
     for (let i = 1; i < pegarQtdPerguntas.value; i++) {
         perguntas.innerHTML += `
-        <div class="novaPergunta">
+        <div class="novaPergunta" onClick="criarNovaPergunta(${contador})">
             <p>Pergunta ${contador}</p>
             <ion-icon name="create-outline"></ion-icon>
         </div>
@@ -34,7 +34,7 @@ function botaoCriarNiveis() {
     let contador = 2;
     for (let i = 1; i < pegarQtdNiveis.value; i++) {
         niveis.innerHTML += `
-        <div class="novaPergunta">
+        <div class="novaPergunta" onClick="criaNovoNivel(${contador})">
             <p>Nível ${contador}</p>
             <ion-icon name="create-outline"></ion-icon>
         </div>
@@ -42,6 +42,33 @@ function botaoCriarNiveis() {
         contador++
     }
     niveis.innerHTML += `<button onclick="botaoCriarNiveis()">Finalizar Quizz</button>`
+}
+
+function criarNovaPergunta(indice){
+    const proximaPergunta = document.querySelector(".novaPergunta");
+    proximaPergunta.innerHTML += `<p>Pergunta ${indice}</p>
+    <div class="inputsDoUsuario">
+        <input class="tituloNovoQuizz" type="text" placeholder="Texto da pergunta">
+        <input class="URLNovoQuizz" type="text" placeholder="Cor de fundo da pergunta">
+    </div>
+    <p>Resposta correta</p>
+    <div class="inputsDoUsuario">
+        <input class="tituloNovoQuizz" type="text" placeholder="Resposta correta">
+        <input class="URLNovoQuizz" type="text" placeholder="URL da imagem">
+    </div>
+    <p>Respostas incorretas</p>
+    <div class="inputsDoUsuario">
+        <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 1">
+        <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 1">
+        <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 2">
+        <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 2">
+        <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 3">
+        <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 3">
+    </div>`
+}
+
+function criarNovoNivel() {
+
 }
 
 function abrirPagina(classePagina) {

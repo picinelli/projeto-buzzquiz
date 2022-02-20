@@ -59,6 +59,7 @@
 
 .criacaoQuizzSecundaria {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
 }
@@ -109,9 +110,10 @@
 }
 
 .novaPergunta {
+    background-color: red;
     width: 100%;
     height: 74px;
-    display: flex;
+    display: list-item;
     justify-content: space-between;
     align-items: center;
     margin-top: 22px;
@@ -177,12 +179,21 @@
     width: 100%;
     height: 74px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 22px;
     margin-bottom: 22px;
 }
 
 .novaPergunta ion-icon {
     font-size: 26px;
+}
+
+.criacaoQuizzTerciaria textarea {
+    width: 100%;
+    height: 177px;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
