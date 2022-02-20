@@ -27,6 +27,7 @@ function buscarTodosQuizzes(promessa) {
     promessa.data.forEach(elemento => {
         listaDeQuizzesConteudo.innerHTML += `
         <div class="quizzExemplo" id="${elemento.id}" onclick="selecionarQuizz(this)">
+            <div class="gradiente"></div>
             <img src="${elemento.image}" alt="">
             <p>${elemento.title}</p>
         </div>
@@ -44,4 +45,11 @@ function selecionarQuizz(quizzSelecionado) {
 
     let promessaConteudo = axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${IDQuiz}`);
     promessaConteudo.then(criarPerguntasQuizz).catch(() => window.alert('Algo de errado nao esta certo, tente novamente!'))
+}
+
+function enviarParaPaginaTres() {
+    let listaDeQuizzes = document.querySelector('.listaDeQuizzes')
+    let criacaoQuizz = document.querySelector('.criacaoQuizz')
+    listaDeQuizzes.classList.add('escondido')
+    criacaoQuizz.classList.remove('escondido')
 }

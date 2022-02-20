@@ -20,9 +20,23 @@
 
     <main>
         <section class="listaDeQuizzes">
-            <div class="novoQuizz">
+            <div class="novoQuizz escondido">
                 <p>Você não criou nenhum quizz ainda :(</p>
-                <button class="criarQuizz">Criar Quizz</button>
+                <button class="criarQuizz" onclick="enviarParaPaginaTres()">Criar Quizz</button>
+            </div>
+
+            <div class="seusQuizzes">
+                <div class="seusQuizzesTitulo">
+                    <h2>Seus Quizzes</h2>
+                    <div class="fundoIconeMais" onclick="enviarParaPaginaTres()">
+                        <img src="imgs/iconeMais.svg" alt="">
+                    </div>
+                </div>
+                <div class="quizzExemplo" onclick="selecionarQuizz(this)">
+                    <div class="gradiente"></div>
+                    <img src="imgs/Hogwarts.svg" alt="">
+                    <p>Teste teste teste</p>
+                </div>
             </div>
 
             <h2>Todos os Quizzes</h2>
@@ -163,5 +177,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/scriptPage1.js"></script>
     <script src="scripts/scriptPage2.js"></script>
+    <script src="scripts/scriptsPage3.js"></script>
 </body>
 </html>
