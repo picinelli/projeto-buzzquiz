@@ -1,167 +1,154 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="stylePage1.css">
-    <link rel="stylesheet" href="stylePage3.css">
-    <link rel="stylesheet" href="stylePage2.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuzzQuizz</title>
-</head>
-<body>
+    <link rel="icon" type="image/png" href="./img/icon.png" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>BuzzQuizz</h1>
+      <h1>BuzzQuizz</h1>
     </header>
 
     <main>
-        <section class="listaDeQuizzes">
-            <div class="novoQuizz">
-                <p>Você não criou nenhum quizz ainda :(</p>
-                <button class="criarQuizz">Criar Quizz</button>
-            </div>
+      <section class="seus-quizzes">
+        <div class="header hidden">
+          <h2 class="titulo hidden">Seus Quizzes</h2>
+          <div class="icone-btn hidden" onclick="criarQuizz()">
+            <ion-icon name="add-circle"></ion-icon>
+          </div>
+        </div>
+        <!-- <div class="quizz" onclick="selecionarQuizz()">
+          <p class="quizz-titulo">Teste</p>
+        </div>
 
-            <h2>Todos os Quizzes</h2>
+        <div class="quizz" onclick="selecionarQuizz()">
+          <p class="quizz-titulo">Teste</p>
+        </div>
 
-            <div class="listaDeQuizzesConteudo">
-            </div>
-        </section>
+        <div class="quizz" onclick="selecionarQuizz()">
+          <p class="quizz-titulo">Teste</p>
+        </div> -->
 
-        <section class="pagina-quizz escondido">
-            <div class="titulo-quizz">
-                <img src="imgs/Hogwarts.svg" alt="">
-                <div class="escurecimento-imagem"></div>
-                <p>O quão Potterhead é você?</p>
-            </div>
-            <!--
-            <div class="caixa-quizz">
-                <div class="pergunta-quizz">
-                    <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
-                </div>
-                
-                <div class="opcoes-quizz">
-                    <div class="opcao" onclick="selecionarResposta(this)">
-                        <img src="imgs/gato.svg" alt="">
-                        <p>Gatíneo</p>
-                    </div>
-                    <div class="opcao" onclick="selecionarResposta(this)">
-                        <img src="imgs/gato.svg" alt="">
-                        <p>Gatíneo</p>
-                    </div>
-                    <div class="opcao" onclick="selecionarResposta(this)">
-                        <img src="imgs/gato.svg" alt="">
-                        <p>Gatíneo</p>
-                    </div>
-                    <div class="opcao" onclick="selecionarResposta(this)">
-                        <img src="imgs/gato.svg" alt="">
-                        <p>Gatíneo</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="caixa-quizz">
-                
-                <div class="pergunta-quizz">
-                    <p>Em qual animal Olho-Tonto Moody transfigurou Malfoy?</p>
-                </div>
-                
-                <div class="opcoes-quizz"> 
-                    <div class="opcao" onclick="selecionarResposta(this)">
-                        <img src="imgs/gato.svg" alt="">
-                        <p>Gatíneo</p>
-                    </div>
-                    <div class="opcao" onclick="selecionarResposta(this)">
-                        <img src="imgs/gato.svg" alt="">
-                        <p>Gatíneo</p>
-                    </div>
-                    <div class="opcao" onclick="selecionarResposta(this)">
-                        <img src="imgs/gato.svg" alt="">
-                        <p>Gatíneo</p>
-                    </div>
-                    <div class="opcao" onclick="selecionarResposta(this)">
-                        <img src="imgs/gato.svg" alt="">
-                        <p>Gatíneo</p>
-                    </div>
-                    
-                </div>
-            </div>
-            -->
-            <!--
-            <div class="resultado-quizz escondido">
-                <div class="quizz__resultado-titulo">
-                    <p>88% de acerto: Você é praticamente um aluno de Hogwarts!</p>
-                </div>
-                <div class="quizz__resultado-conteudo">
-                    <img class="quizz__resultado-img" src="imgs/Dumbledore.svg" alt="">
-                    <p class="quizz__resultado-texto">Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</p>
-                </div>
-            </div>
-            <div class="botoes__quizz escondido">
-                <div class="botoes__quizz-reiniciar">
-                    <p>Reiniciar Quizz</p>
-                </div>
-                <div class="botoes__quizz-voltarhome">
-                    <p>Voltar pra home</p>
-                </div>
-            </div>
-            -->
-        </section>
-
-        <section class="criacaoQuizz escondido">
-            <p>Comece pelo começo</p>
-            <div class="inputsDoUsuario">
-                <input class="tituloNovoQuizz" type="text" placeholder="Título do seu quizz">
-                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem do seu quizz">
-                <input class="quantidadePerguntas" type="text" placeholder="Quantidade de perguntas do quizz">
-                <input class="quantidadeNiveis" type="text" placeholder="Quantidade de níveis do quizz">
-            </div>
-            <button onclick="botaoCriarPerguntas()">Prosseguir pra criar perguntas</button>
-        </section>
-
-        <section class="criacaoQuizzSecundaria escondido">
-            <p>Crie suas perguntas</p>
-            <p>Pergunta 1</p>
-            <div class="inputsDoUsuario">
-                <input class="tituloNovoQuizz" type="text" placeholder="Texto da pergunta">
-                <input class="URLNovoQuizz" type="text" placeholder="Cor de fundo da pergunta">
-            </div>
-            <p>Resposta correta</p>
-            <div class="inputsDoUsuario">
-                <input class="tituloNovoQuizz" type="text" placeholder="Resposta correta">
-                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem">
-            </div>
-            <p>Respostas incorretas</p>
-            <div class="inputsDoUsuario">
-                <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 1">
-                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 1">
-                <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 2">
-                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 2">
-                <input class="tituloNovoQuizz" type="text" placeholder="Resposta incorreta 3">
-                <input class="URLNovoQuizz" type="text" placeholder="URL da imagem 3">
-            </div>
-        </section>
-
-        <section class="criacaoQuizzTerciaria escondido">
-                <p>Agora, decida os níveis</p>
-                <p>Nível 1</p>
-                <div class="inputsDoUsuario">
-                    <input class="tituloNovoQuizz" type="text" placeholder="Título do nível">
-                    <input class="URLNovoQuizz" type="text" placeholder="% de acerto mínima">
-                    <input class="tituloNovoQuizz" type="text" placeholder="URL da imagem do nível">
-                    <textarea placeholder="Descrição do nível"></textarea>
-                </div>
-        </section>
-
+        <div class="caixaQuizzesVazios" isCorrectAnswer="true">
+          <p>Você não criou nenhum quizz ainda :(</p>
+          <button class="btn" onclick="criarQuizz()">Criar Quizz</button>
+        </div>
+      </section>
+      <h2 class="titulo">Todos os Quizzes</h2>
+      <section class="todos-quizzes"></section>
     </main>
-    
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <aside class="pagina-quizz hidden">
+      <div class="header">
+        <div class="degrade"></div>
+        <div class="header-titulo">O quão Potterhead é você?</div>
+      </div>
+
+      <div class="caixaPerguntas">
+        <div class="pergunta">
+          <p class="pergunta-texto">
+            Em qual animal Olho-Tonto Moody transfigurou Malfoy?
+          </p>
+          <div class="alternativas">
+            <div class="alternativa">
+              <img src="./img/gato.png" />
+              <p class="texto">Gatíneo</p>
+            </div>
+            <div class="alternativa">
+              <img src="./img/ratata.png" />
+              <p class="texto">Ratata</p>
+            </div>
+          </div>
+          <div class="alternativas">
+            <div class="alternativa">
+              <img src="./img/sapo-gordo.png" />
+              <p class="texto">Sapo Gordo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-resultado">
+        <div class="topo">
+          <h3 class="texto"></h3>
+        </div>
+
+        <section>
+          <img src="" />
+          <p class="mensagem"></p>
+        </section>
+
+        <button class="btn-reiniciar" onclick="reiniciarQuizz()">
+          Reiniciar Quizz
+        </button>
+        <button class="btn-voltar" onclick="voltarParaHome()">
+          Voltar pra home
+        </button>
+      </div>
+    </aside>
+
+    <aside class="pagina-criar-quiz hidden">
+      <section class="info-basica">
+        <h2 class="titulo container">Comece pelo começo</h2>
+
+        <form class="form-criar" onsubmit="setTimeout(criarPerguntas,200)">
+          <div class="container">
+            <div>
+              <input
+                type="text"
+                class="titulo-quiz"
+                placeholder="Título do seu quizz"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                class="url-imagem"
+                placeholder="URL da imagem do seu quizz"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                class="qtd-perguntas"
+                placeholder="Quantidade de perguntas do quizz"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                class="qtd-niveis"
+                placeholder="Quantidade de níveis do quizz"
+                required
+              />
+            </div>
+          </div>
+          <div class="btn-container">
+            <button class="btn-enviar" type="submit">
+              Prosseguir pra criar perguntas
+            </button>
+          </div>
+        </form>
+      </section>
+    </aside>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="scripts/scriptPage1.js"></script>
-    <script src="scripts/scriptPage2.js"></script>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
