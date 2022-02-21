@@ -31,7 +31,7 @@ function renderizarQuizzes(quizzes) {
     const seusQuizzes = document.querySelector(".seus-quizzes");
     const todosQuizzes = document.querySelector(".todos-quizzes");
     const caixasQuizzesVazios = seusQuizzes.querySelector(".caixaQuizzesVazios");
-    const header = seusQuizzes.querySelector(".header");
+    const header = document.querySelector(".header");
 
     todosQuizzes.innerHTML = "";
     try{
@@ -65,7 +65,7 @@ function renderizarQuizzes(quizzes) {
 
       if (arrSeusQuizzes && estaEmSeusQuizzes) {
         seusQuizzes.innerHTML += `
-          <div class="quizz" style="${background}" onclick="selecionarQuizz(${quiz.id})">
+          <div class="quizz" style="${background}" onclick="selecionarQuizz(${quiz.id})" data-identifier="quizz-card">
             <div class="degrade"></div>
             <p class="quizz-titulo">
               ${quiz.title}
@@ -74,7 +74,7 @@ function renderizarQuizzes(quizzes) {
           `;
       } else {
         todosQuizzes.innerHTML += `
-          <div class="quizz" style="${background}" onclick="selecionarQuizz(${quiz.id})">
+          <div class="quizz" style="${background}" onclick="selecionarQuizz(${quiz.id})" data-identifier="quizz-card">
             <div class="degrade"></div>
             <p class="quizz-titulo">
               ${quiz.title}
@@ -138,14 +138,14 @@ function selecionarQuizz(id) {
     for (let i = 0; i < perguntasEmbaralhadas.length; i++) {
       if (perguntasEmbaralhadas[i].isCorrectAnswer) {
         alternativas += `
-        <div class="alternativa certa" onclick="selecionarAlternativa(this)">
+        <div class="alternativa certa" onclick="selecionarAlternativa(this)" data-identifier="answer">
           <img src="${perguntasEmbaralhadas[i].image}"/>
           <p class="texto">${perguntasEmbaralhadas[i].text}</p>
         </div>
         `;
       } else {
         alternativas += `
-        <div class="alternativa" onclick="selecionarAlternativa(this)">
+        <div class="alternativa" onclick="selecionarAlternativa(this)" data-identifier="answer">
           <img src="${perguntasEmbaralhadas[i].image}"/>
           <p class="texto">${perguntasEmbaralhadas[i].text}</p>
         </div>
@@ -154,7 +154,7 @@ function selecionarQuizz(id) {
     }
     let perguntaElemento = `
     <div class = "pergunta">
-      <p class="pergunta-texto" style="background-color:${pergunta.color}">
+      <p class="pergunta-texto" style="background-color:${pergunta.color}" data-identifier="question">
         ${pergunta.title}
       </p>
       <div class="alternativas">
@@ -170,7 +170,7 @@ function selecionarQuizz(id) {
   resultados.innerHTML = "";
   niveis.forEach((nivel) => {
     let resultado = `
-    <div class = "nivel hidden" id="${nivel.title + nivel.minValue}">
+    <div class = "nivel hidden" id="${nivel.title + nivel.minValue}" data-identifier="quizz-result">
       <div class="topo">
         <h3 class="texto">${nivel.title}</h3>
       </div>
@@ -428,14 +428,14 @@ function preencherPerguntas(numeroPergunta = 1) {
   for (let i = 1; i < quizEnviar.qtdPerguntas + 1; i++) {
     if (i < numeroPergunta) {
       paginaCriarQuizz.innerHTML += `
-      <div class="caixaEditarPergunta" onclick="preencherPerguntas(${i})">
+      <div class="caixaEditarPergunta" onclick="preencherPerguntas(${i})" data-identifier="expand">
         <h3 class="titulo-input">Pergunta ${i}</h3>
         <ion-icon name="create-outline"></ion-icon>
       </div>
       `;
     } else if (i == numeroPergunta) {
       paginaCriarQuizz.innerHTML += `
-      <form class ="form-criar criar-perguntas" >
+      <form class="form-criar criar-perguntas" data-identifier="question">
         <div class="container">
           <div>
             <h3 class="titulo-input">Pergunta ${numeroPergunta}</h3>
@@ -469,7 +469,7 @@ function preencherPerguntas(numeroPergunta = 1) {
       `;
     } else {
       paginaCriarQuizz.innerHTML += `
-      <div class="caixaEditarPergunta" onclick="preencherPerguntas(${i})">
+      <div class="caixaEditarPergunta" onclick="preencherPerguntas(${i})" data-identifier="expand">
         <h3 class="titulo-input">Pergunta ${i}</h3>
         <ion-icon name="create-outline"></ion-icon>
       </div>
@@ -574,14 +574,14 @@ function preencherNiveis(numeroNivel = 1) {
     for (let i = 1; i < quizEnviar.qtdNiveis + 1; i++) {
       if (i < numeroNivel) {
         paginaCriarQuizz.innerHTML += `
-        <div class="caixaEditarPergunta" onclick="preencherNiveis(${i})">
+        <div class="caixaEditarPergunta" onclick="preencherNiveis(${i})" data-identifier="expand">
           <h3 class="titulo-input">Nível ${i}</h3>
           <ion-icon name="create-outline"></ion-icon>
         </div>
         `;
       } else if (i == numeroNivel) {
         paginaCriarQuizz.innerHTML += `
-        <form class ="form-criar criar-perguntas" >
+        <form class ="form-criar criar-perguntas" data-identifier="level">
           <div class="container">
             <div>
               <h3 class="titulo-input">Nível ${numeroNivel}</h3>
@@ -595,7 +595,7 @@ function preencherNiveis(numeroNivel = 1) {
         `;
       } else {
         paginaCriarQuizz.innerHTML += `
-        <div class="caixaEditarPergunta" onclick="preencherNiveis(${i})">
+        <div class="caixaEditarPergunta" onclick="preencherNiveis(${i})" data-identifier="expand">
           <h3 class="titulo-input">Nível ${i}</h3>
           <ion-icon name="create-outline"></ion-icon>
         </div>
