@@ -26,7 +26,7 @@ function buscarTodosQuizzes(promessa) {
 
     promessa.data.forEach(elemento => {
         listaDeQuizzesConteudo.innerHTML += `
-        <div class="quizzExemplo" id="${elemento.id}" onclick="selecionarQuizz(this)">
+        <div class="quizzExemplo" id="${elemento.id}" onclick="selecionarQuizz(this)" data-identifier="quizz-card">
             <div class="gradiente"></div>
             <img src="${elemento.image}" alt="">
             <p>${elemento.title}</p>

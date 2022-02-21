@@ -124,7 +124,7 @@ h2 {
     position: absolute;
     bottom: 0;
     margin-bottom: 15px;
-    width: 340px;
+    width: 322px;
     font-family: Roboto;
     font-size: 19px;
     font-weight: 400;
@@ -134,6 +134,7 @@ h2 {
     margin-top: 140px;
     color: white;
     z-index: 3;
+    overflow-wrap: break-word;
 }
 
 .seusQuizzesTitulo {
@@ -192,7 +193,7 @@ h2 {
 
     .quizzExemplo p {
         position: relative;
-        width: 340px;
+        width: 322px;
         font-family: Roboto;
         font-size: 19px;
         font-weight: 400;

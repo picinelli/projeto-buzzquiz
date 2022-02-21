@@ -31,7 +31,7 @@ function criarTituloPerguntas(promessa) {
         let paginaQuizz = document.querySelector('.pagina-quizz')
         paginaQuizz.innerHTML += `
         <div class="caixa-quizz">
-            <div class="pergunta-quizz" style="background-color: ${elemento.color}">
+            <div class="pergunta-quizz" style="background-color: ${elemento.color}" data-identifier="question">
                 <p>${elemento.title}</p>
             </div>
             <div class="opcoes-quizz">
@@ -53,7 +53,7 @@ function criarRespostas(promessa) {
         })
         dadosRespostas.forEach(elemento => {
             selecaoDePergunta[i].innerHTML += `
-            <div class="opcao ${elemento.isCorrectAnswer}" onclick="selecionarResposta(this)">
+            <div class="opcao ${elemento.isCorrectAnswer}" onclick="selecionarResposta(this)" data-identifier="answer">
                 <img src="${elemento.image}" alt="">
                 <p>${elemento.text}</p>
             </div>
@@ -92,7 +92,7 @@ function checarLiberacaoResultado(promessaNiveis) {
     if (quantidadeDePerguntas === contadorChecarResultado) {
         setTimeout(() => {resultadoQuizz.scrollIntoView({ behavior: "smooth" })}, 2000);
         paginaQuizz.innerHTML += `
-        <div class="resultado-quizz">
+        <div class="resultado-quizz" data-identifier="quizz-result">
             <div class="quizz__resultado-titulo">
                 <p>${resultado}%: ${resultadoTitulo}</p>
             </div>
